@@ -14,9 +14,9 @@
 
     /* ── 메인 포인트 컬러 ── */
     :root {
-      --primary: #FF6B35;
-      --primary-light: #FFF0EB;
-      --primary-dark: #E5531A;
+      --primary: #6C5CE7;
+      --primary-light: #EEF0FF;
+      --primary-dark: #5A4BD1;
       --navy: #1C1F3A;
       --navy-light: #2D3158;
       --gray-bg: #F8F8FA;
@@ -32,7 +32,7 @@
       align-items: center;
       gap: 8px;
     }
-    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,107,53,0.3); }
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(108,92,231,0.35); }
 
     .btn-outline {
       border: 2px solid var(--navy);
@@ -58,7 +58,7 @@
     }
     .situation-card:hover {
       border-color: var(--primary);
-      box-shadow: 0 12px 40px rgba(255,107,53,0.13);
+      box-shadow: 0 12px 40px rgba(108,92,231,0.13);
       transform: translateY(-5px);
     }
     .situation-card .emoji {
@@ -87,8 +87,8 @@
       transition: all 0.2s;
     }
     .service-card:hover {
-      border-color: #FFD4C2;
-      box-shadow: 0 8px 32px rgba(255,107,53,0.09);
+      border-color: #C5BEFF;
+      box-shadow: 0 8px 32px rgba(108,92,231,0.1);
     }
 
     /* ── 배지 ── */
@@ -160,7 +160,7 @@
 
     /* ── 히어로 배경 ── */
     .hero-wrap {
-      background: linear-gradient(160deg, #FFF7F4 0%, #FFFFFF 60%, #F0F2FF 100%);
+      background: linear-gradient(160deg, #F3F1FF 0%, #FFFFFF 55%, #EEF0FF 100%);
     }
 
     /* ── 강조 언더라인 ── */
@@ -175,7 +175,7 @@
       left: 0;
       width: 100%;
       height: 10px;
-      background: rgba(255,107,53,0.18);
+      background: rgba(108,92,231,0.18);
       z-index: -1;
       border-radius: 4px;
     }
@@ -270,8 +270,8 @@
           <div class="stat-num" style="color:var(--navy);">1:1</div>
           <div class="text-xs text-gray-500 mt-1 font-medium">대표원장 직강</div>
         </div>
-        <div class="rounded-2xl p-5" style="background:#F0FBF0;">
-          <div class="stat-num" style="color:#2E7D32;">90분</div>
+        <div class="rounded-2xl p-5" style="background:#EEF0FF;">
+          <div class="stat-num" style="color:#5A4BD1;">90분</div>
           <div class="text-xs text-gray-500 mt-1 font-medium">집중 수업</div>
         </div>
       </div>
@@ -378,7 +378,7 @@
           <p class="text-sm text-gray-500 leading-relaxed">강점과 약점을 정밀 분석 후, 나만을 위한 커리큘럼을 설계합니다. 그룹 수업과는 차원이 다른 집중도입니다.</p>
         </div>
 
-        <div class="service-card" style="border-color:var(--primary); box-shadow:0 0 0 1px rgba(255,107,53,0.15);">
+        <div class="service-card" style="border-color:var(--primary); box-shadow:0 0 0 1px rgba(108,92,231,0.2);">
           <div class="text-4xl mb-4">👑</div>
           <span class="badge mb-3 inline-block">FEATURE 02</span>
           <h3 class="text-xl font-black mb-3" style="color:var(--navy);">15년 경력<br/>대표원장 직강</h3>
@@ -538,12 +538,12 @@
       <div class="grid md:grid-cols-2 gap-12 items-center">
 
         <div>
-          <span class="section-tag" style="color:#FF9A7A;">ABOUT</span>
+          <span class="section-tag" style="color:#A99CF8;">ABOUT</span>
           <h2 class="text-4xl font-black text-white mb-5 leading-tight">
-            대표원장<br/><span style="color:#FF6B35;">김경민</span>입니다 👋
+            대표원장<br/><span style="color:#A99CF8;">김경민</span>입니다 👋
           </h2>
           <p class="text-gray-300 leading-relaxed mb-6">
-            강의와 방송을 합쳐 <strong class="text-white">15년의 경력</strong>을 쌓아온 스피치 전문가입니다. 응용인지심리학·상담심리학을 기반으로 단순한 발성 교정이 아닌 <em class="text-orange-300">말의 근육</em>을 만드는 교육을 합니다.
+            강의와 방송을 합쳐 <strong class="text-white">15년의 경력</strong>을 쌓아온 스피치 전문가입니다. 응용인지심리학·상담심리학을 기반으로 단순한 발성 교정이 아닌 <em style="color:#C5BEFF;">말의 근육</em>을 만드는 교육을 합니다.
           </p>
           <div class="space-y-3">
             <div class="check-item text-sm text-gray-300">강의·방송 경력 도합 15년의 노하우</div>
@@ -561,8 +561,8 @@
             <p class="text-gray-400 text-sm mt-3">— 대표원장 김경민</p>
           </div>
           <div class="grid grid-cols-3 gap-3">
-            <div class="rounded-xl p-4 text-center" style="background:rgba(255,107,53,0.15);">
-              <div class="text-2xl font-black text-orange-400">15년</div>
+            <div class="rounded-xl p-4 text-center" style="background:rgba(108,92,231,0.18);">
+              <div class="text-2xl font-black" style="color:#A99CF8;">15년</div>
               <div class="text-xs text-gray-400 mt-1">강의·방송</div>
             </div>
             <div class="rounded-xl p-4 text-center" style="background:rgba(255,255,255,0.07);">
@@ -602,7 +602,7 @@
                   class="w-full flex items-center justify-between px-6 py-5 text-left font-bold text-base hover:bg-gray-50 transition"
                   style="color:var(--navy);">
             <span>스피치 학원에 다니면 정말 효과가 있나요?</span>
-            <span class="faq-arrow text-orange-400 text-xl flex-shrink-0 ml-4 transition-transform duration-300">＋</span>
+            <span class="faq-arrow text-xl flex-shrink-0 ml-4 transition-transform duration-300" style="color:var(--primary);">＋</span>
           </button>
           <div class="faq-body hidden px-6 pb-5 text-sm text-gray-500 leading-relaxed">
             스피치 능력은 훈련을 통해 충분히 향상될 수 있습니다. 퀸비스피치는 개인 맞춤형 커리큘럼으로 단기간 내에 효과를 경험할 수 있도록 지도하며, 말하기 기술뿐 아니라 자신감 향상까지 함께 지원합니다.
@@ -614,7 +614,7 @@
                   class="w-full flex items-center justify-between px-6 py-5 text-left font-bold text-base hover:bg-gray-50 transition"
                   style="color:var(--navy);">
             <span>긴장하고 말을 더듬는 경우에도 나아질 수 있나요?</span>
-            <span class="faq-arrow text-orange-400 text-xl flex-shrink-0 ml-4 transition-transform duration-300">＋</span>
+            <span class="faq-arrow text-xl flex-shrink-0 ml-4 transition-transform duration-300" style="color:var(--primary);">＋</span>
           </button>
           <div class="faq-body hidden px-6 pb-5 text-sm text-gray-500 leading-relaxed">
             가능합니다. 발표불안, 긴장, 더듬기 문제는 체계적인 훈련과 피드백을 통해 충분히 극복할 수 있습니다. 심리학 기반 접근법으로 불안의 근본 원인을 함께 다루며, 편안하게 생각을 전달할 수 있도록 단계적으로 지도합니다.
@@ -626,7 +626,7 @@
                   class="w-full flex items-center justify-between px-6 py-5 text-left font-bold text-base hover:bg-gray-50 transition"
                   style="color:var(--navy);">
             <span>퀸비스피치에서 구체적으로 무엇을 배우나요?</span>
-            <span class="faq-arrow text-orange-400 text-xl flex-shrink-0 ml-4 transition-transform duration-300">＋</span>
+            <span class="faq-arrow text-xl flex-shrink-0 ml-4 transition-transform duration-300" style="color:var(--primary);">＋</span>
           </button>
           <div class="faq-body hidden px-6 pb-5 text-sm text-gray-500 leading-relaxed">
             발성·발음·호흡 기초부터 논리적 말하기, 설득력 있는 스피치, 상황별 표현법, 자세·시선 처리까지 종합적으로 배웁니다. 또한 자존감 향상을 위한 낭독·연기 연습도 커리큘럼에 포함되어 있습니다.
@@ -638,7 +638,7 @@
                   class="w-full flex items-center justify-between px-6 py-5 text-left font-bold text-base hover:bg-gray-50 transition"
                   style="color:var(--navy);">
             <span>1:1 개인 레슨과 그룹 레슨의 차이점은 무엇인가요?</span>
-            <span class="faq-arrow text-orange-400 text-xl flex-shrink-0 ml-4 transition-transform duration-300">＋</span>
+            <span class="faq-arrow text-xl flex-shrink-0 ml-4 transition-transform duration-300" style="color:var(--primary);">＋</span>
           </button>
           <div class="faq-body hidden px-6 pb-5 text-sm text-gray-500 leading-relaxed">
             개인 레슨은 나의 강점·약점에만 집중하는 밀착형 맞춤 지도가 가능합니다. 그룹 레슨은 다양한 피드백과 여러 상황 대처 능력을 함께 키울 수 있습니다. 퀸비스피치는 기본적으로 1:1 개인 레슨으로 운영됩니다.
@@ -650,7 +650,7 @@
                   class="w-full flex items-center justify-between px-6 py-5 text-left font-bold text-base hover:bg-gray-50 transition"
                   style="color:var(--navy);">
             <span>수업 시간과 권장 횟수는 어떻게 되나요?</span>
-            <span class="faq-arrow text-orange-400 text-xl flex-shrink-0 ml-4 transition-transform duration-300">＋</span>
+            <span class="faq-arrow text-xl flex-shrink-0 ml-4 transition-transform duration-300" style="color:var(--primary);">＋</span>
           </button>
           <div class="faq-body hidden px-6 pb-5 text-sm text-gray-500 leading-relaxed">
             1회 수업 시간은 90분(1시간 30분)이며, 필요에 따라 조율 가능합니다. 권장 수강 횟수는 10회 또는 15회입니다. 목표와 일정에 맞춰 상담 후 결정합니다.
@@ -662,7 +662,7 @@
                   class="w-full flex items-center justify-between px-6 py-5 text-left font-bold text-base hover:bg-gray-50 transition"
                   style="color:var(--navy);">
             <span>수강료는 어떻게 되나요?</span>
-            <span class="faq-arrow text-orange-400 text-xl flex-shrink-0 ml-4 transition-transform duration-300">＋</span>
+            <span class="faq-arrow text-xl flex-shrink-0 ml-4 transition-transform duration-300" style="color:var(--primary);">＋</span>
           </button>
           <div class="faq-body hidden px-6 pb-5 text-sm text-gray-500 leading-relaxed">
             레슨 종류, 횟수, 기간 등에 따라 달라집니다. 상담을 통해 개인 상황에 맞춰 안내드립니다. <strong class="text-gray-700">초기 상담과 컨설팅은 무료</strong>입니다. 부담 없이 먼저 연락주세요.
@@ -674,7 +674,7 @@
                   class="w-full flex items-center justify-between px-6 py-5 text-left font-bold text-base hover:bg-gray-50 transition"
                   style="color:var(--navy);">
             <span>면접을 앞두고 단기간에 실력 향상이 가능할까요?</span>
-            <span class="faq-arrow text-orange-400 text-xl flex-shrink-0 ml-4 transition-transform duration-300">＋</span>
+            <span class="faq-arrow text-xl flex-shrink-0 ml-4 transition-transform duration-300" style="color:var(--primary);">＋</span>
           </button>
           <div class="faq-body hidden px-6 pb-5 text-sm text-gray-500 leading-relaxed">
             가능합니다. 단기 속성 과정을 통해 면접 예상 질문 답변 구성, 실전 발표 연습, 자세·표정 교정을 집중적으로 지도합니다. 면접 일정을 알려주시면 그에 맞춰 커리큘럼을 설계해 드립니다.
@@ -686,7 +686,7 @@
                   class="w-full flex items-center justify-between px-6 py-5 text-left font-bold text-base hover:bg-gray-50 transition"
                   style="color:var(--navy);">
             <span>스피치에 자신이 없어도 학원에 다닐 수 있나요?</span>
-            <span class="faq-arrow text-orange-400 text-xl flex-shrink-0 ml-4 transition-transform duration-300">＋</span>
+            <span class="faq-arrow text-xl flex-shrink-0 ml-4 transition-transform duration-300" style="color:var(--primary);">＋</span>
           </button>
           <div class="faq-body hidden px-6 pb-5 text-sm text-gray-500 leading-relaxed">
             당연히 가능합니다. 오히려 처음 시작하시는 분들을 더 환영합니다. 편안한 분위기에서 개개인의 눈높이에 맞춰 지도하기 때문에, 부담 없이 방문하실 수 있습니다.
@@ -698,7 +698,7 @@
                   class="w-full flex items-center justify-between px-6 py-5 text-left font-bold text-base hover:bg-gray-50 transition"
                   style="color:var(--navy);">
             <span>평소에 어떤 노력을 병행하면 좋을까요?</span>
-            <span class="faq-arrow text-orange-400 text-xl flex-shrink-0 ml-4 transition-transform duration-300">＋</span>
+            <span class="faq-arrow text-xl flex-shrink-0 ml-4 transition-transform duration-300" style="color:var(--primary);">＋</span>
           </button>
           <div class="faq-body hidden px-6 pb-5 text-sm text-gray-500 leading-relaxed">
             음독 연습, 좋은 강연 영상을 보고 요약 발표하기, 거울 앞에서 표정·자세 연습, 다양한 대화 기회를 만드는 것이 도움이 됩니다. 수업 중 담당 원장이 개인에게 맞는 홈트레이닝 방법을 별도로 안내해 드립니다.
@@ -710,7 +710,7 @@
                   class="w-full flex items-center justify-between px-6 py-5 text-left font-bold text-base hover:bg-gray-50 transition"
                   style="color:var(--navy);">
             <span>스피치 학원 선택 시 가장 중요한 것은 무엇인가요?</span>
-            <span class="faq-arrow text-orange-400 text-xl flex-shrink-0 ml-4 transition-transform duration-300">＋</span>
+            <span class="faq-arrow text-xl flex-shrink-0 ml-4 transition-transform duration-300" style="color:var(--primary);">＋</span>
           </button>
           <div class="faq-body hidden px-6 pb-5 text-sm text-gray-500 leading-relaxed">
             강사의 실력과 경력, 교육 방식, 커리큘럼의 적합성을 꼼꼼히 살펴보세요. 퀸비스피치는 15년 경력의 대표원장이 직접 1:1로 가르치며, 심리학 기반의 체계적인 커리큘럼으로 운영됩니다.
@@ -782,16 +782,16 @@
           <div>
             <label class="text-sm font-bold text-gray-700 mb-1.5 block">이름 *</label>
             <input type="text" placeholder="홍길동"
-                   class="w-full border-2 border-gray-100 bg-gray-50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange-300 transition" />
+                   class="w-full border-2 border-gray-100 bg-gray-50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-indigo-300 transition" />
           </div>
           <div>
             <label class="text-sm font-bold text-gray-700 mb-1.5 block">연락처 *</label>
             <input type="tel" placeholder="010-0000-0000"
-                   class="w-full border-2 border-gray-100 bg-gray-50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange-300 transition" />
+                   class="w-full border-2 border-gray-100 bg-gray-50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-indigo-300 transition" />
           </div>
           <div>
             <label class="text-sm font-bold text-gray-700 mb-1.5 block">내 상황을 선택해주세요 *</label>
-            <select class="w-full border-2 border-gray-100 bg-gray-50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange-300 transition text-gray-700">
+            <select class="w-full border-2 border-gray-100 bg-gray-50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-indigo-300 transition text-gray-700">
               <option value="">상황을 선택해주세요</option>
               <option>면접 준비 중 (취업·이직)</option>
               <option>발표가 너무 무서워요 (발표불안)</option>
@@ -806,7 +806,7 @@
           <div>
             <label class="text-sm font-bold text-gray-700 mb-1.5 block">하고 싶은 말이 있으면 적어주세요</label>
             <textarea placeholder="현재 고민이나 궁금한 점을 자유롭게 적어주세요." rows="3"
-                      class="w-full border-2 border-gray-100 bg-gray-50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange-300 transition resize-none"></textarea>
+                      class="w-full border-2 border-gray-100 bg-gray-50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-indigo-300 transition resize-none"></textarea>
           </div>
           <button class="btn-primary w-full justify-center py-4 text-base rounded-xl">
             ⚡ 무료 상담 신청하기
@@ -818,11 +818,11 @@
       <!-- 직접 연락 -->
       <div class="mt-6 grid grid-cols-2 gap-3">
         <a href="tel:010-2535-1706"
-           class="flex items-center justify-center gap-2 py-4 rounded-2xl border-2 border-gray-100 hover:border-orange-200 text-sm font-bold text-gray-700 transition hover:bg-orange-50">
+           class="flex items-center justify-center gap-2 py-4 rounded-2xl border-2 border-gray-100 hover:border-indigo-200 text-sm font-bold text-gray-700 transition hover:bg-indigo-50">
           📞 010-2535-1706
         </a>
         <a href="mailto:queenbee_speech@naver.com"
-           class="flex items-center justify-center gap-2 py-4 rounded-2xl border-2 border-gray-100 hover:border-orange-200 text-sm font-bold text-gray-700 transition hover:bg-orange-50">
+           class="flex items-center justify-center gap-2 py-4 rounded-2xl border-2 border-gray-100 hover:border-indigo-200 text-sm font-bold text-gray-700 transition hover:bg-indigo-50">
           ✉️ 이메일 문의
         </a>
       </div>
