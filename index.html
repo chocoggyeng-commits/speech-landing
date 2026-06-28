@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>퀸비스피치 | 자신감을 찾아주는 말근육 퍼스널 트레이닝</title>
-  <meta name="description" content="15년 경력 대표원장 1:1 직강. 면접스피치·보이스트레이닝·발표불안·프리젠테이션·IR피칭. 경기도 수원 광교. 010-2535-1706" />
+  <meta name="description" content="15년 경력 대표원장 김경민 1:1 직강. 면접·발표불안·보이스트레이닝·IR피칭. 경기도 수원 광교. 010-2535-1706" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
@@ -12,507 +12,684 @@
     * { font-family: 'Noto Sans KR', sans-serif; }
     html { scroll-behavior: smooth; }
 
-    .hero-bg {
-      background: linear-gradient(150deg, #1a0533 0%, #2d1254 40%, #1a0533 80%, #0d0221 100%);
+    /* ── 메인 포인트 컬러 ── */
+    :root {
+      --primary: #FF6B35;
+      --primary-light: #FFF0EB;
+      --primary-dark: #E5531A;
+      --navy: #1C1F3A;
+      --navy-light: #2D3158;
+      --gray-bg: #F8F8FA;
     }
 
-    .gold { color: #c9a84c; }
-    .gold-bg { background: linear-gradient(135deg, #c9a84c, #f0d080); }
-    .gold-text {
-      background: linear-gradient(90deg, #c9a84c, #f0d080, #c9a84c);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .accent-line {
-      width: 40px;
-      height: 3px;
-      background: linear-gradient(90deg, #c9a84c, #f0d080);
-      border-radius: 9999px;
-    }
-
-    .card {
-      background: white;
-      border: 1px solid #f0ecf8;
-      border-radius: 20px;
-      transition: all 0.3s;
-    }
-    .card:hover {
-      border-color: #c9a84c44;
-      box-shadow: 0 12px 40px rgba(201,168,76,0.12);
-      transform: translateY(-4px);
-    }
-
-    .service-chip {
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      font-weight: 700;
+      border-radius: 14px;
+      transition: all 0.2s;
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      padding: 8px 18px;
-      border-radius: 9999px;
-      border: 1.5px solid #e8dff5;
-      font-size: 14px;
-      font-weight: 500;
-      color: #4a306d;
-      background: #faf8fd;
+      gap: 8px;
+    }
+    .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,107,53,0.3); }
+
+    .btn-outline {
+      border: 2px solid var(--navy);
+      color: var(--navy);
+      font-weight: 700;
+      border-radius: 14px;
       transition: all 0.2s;
-      cursor: default;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
-    .service-chip:hover {
-      background: #4a306d;
-      color: white;
-      border-color: #4a306d;
+    .btn-outline:hover { background: var(--navy); color: white; }
+
+    /* ── 카테고리 카드 ── */
+    .situation-card {
+      background: white;
+      border-radius: 20px;
+      border: 2px solid #EEEEF2;
+      padding: 28px 24px;
+      cursor: pointer;
+      transition: all 0.25s;
+      text-align: center;
+    }
+    .situation-card:hover {
+      border-color: var(--primary);
+      box-shadow: 0 12px 40px rgba(255,107,53,0.13);
+      transform: translateY(-5px);
+    }
+    .situation-card .emoji {
+      font-size: 40px;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .situation-card h3 {
+      font-weight: 900;
+      font-size: 17px;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .situation-card p {
+      font-size: 13px;
+      color: #888;
+      line-height: 1.6;
     }
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
+    /* ── 서비스 카드 ── */
+    .service-card {
+      background: white;
+      border-radius: 18px;
+      padding: 28px;
+      border: 1.5px solid #EEEEF2;
+      transition: all 0.2s;
     }
-    .fade-up   { animation: fadeUp 0.8s ease both; }
-    .delay-1   { animation-delay: 0.15s; }
-    .delay-2   { animation-delay: 0.3s; }
-    .delay-3   { animation-delay: 0.45s; }
-
-    @keyframes float {
-      0%,100% { transform: translateY(0); }
-      50%      { transform: translateY(-8px); }
+    .service-card:hover {
+      border-color: #FFD4C2;
+      box-shadow: 0 8px 32px rgba(255,107,53,0.09);
     }
-    .float { animation: float 4s ease-in-out infinite; }
-    .float-2 { animation: float 5s ease-in-out 1.5s infinite; }
 
-    .divider { width:1px; height:56px; background:linear-gradient(to bottom,transparent,#d1c4e9,transparent); margin:0 auto; }
-
-    .quote-bg {
-      background: linear-gradient(135deg, #2d1254 0%, #1a0533 100%);
-      position: relative;
-      overflow: hidden;
+    /* ── 배지 ── */
+    .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 99px;
+      background: var(--primary-light);
+      color: var(--primary);
     }
-    .quote-bg::before {
-      content: '"';
-      position: absolute;
-      top: -20px;
-      left: 24px;
-      font-size: 160px;
-      color: rgba(201,168,76,0.1);
-      font-family: Georgia, serif;
+
+    .badge-navy {
+      background: #ECEEF8;
+      color: var(--navy);
+    }
+
+    /* ── 섹션 타이틀 ── */
+    .section-tag {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 0.06em;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    /* ── 후기 카드 ── */
+    .review-card {
+      background: white;
+      border-radius: 18px;
+      padding: 24px;
+      border: 1.5px solid #EEEEF2;
+    }
+
+    /* ── 숫자 강조 ── */
+    .stat-num {
+      font-size: 44px;
+      font-weight: 900;
+      color: var(--primary);
       line-height: 1;
-      pointer-events: none;
     }
 
-    .step-num {
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
+    /* ── SNS 아이콘 ── */
+    .sns-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 900;
-      font-size: 14px;
-      flex-shrink: 0;
-      background: linear-gradient(135deg, #c9a84c, #f0d080);
-      color: #1a0533;
+      font-size: 22px;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+    .sns-btn:hover { transform: translateY(-4px); }
+
+    /* ── 애니메이션 ── */
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(20px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+    .fade-up  { animation: fadeUp 0.7s ease both; }
+    .d1 { animation-delay: 0.1s; }
+    .d2 { animation-delay: 0.22s; }
+    .d3 { animation-delay: 0.34s; }
+    .d4 { animation-delay: 0.46s; }
+
+    /* ── 히어로 배경 ── */
+    .hero-wrap {
+      background: linear-gradient(160deg, #FFF7F4 0%, #FFFFFF 60%, #F0F2FF 100%);
     }
 
-    .nav-link {
-      font-size: 14px;
-      color: #4a306d;
-      font-weight: 500;
-      transition: color 0.2s;
+    /* ── 강조 언더라인 ── */
+    .underline-accent {
+      position: relative;
+      display: inline-block;
     }
-    .nav-link:hover { color: #c9a84c; }
+    .underline-accent::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      width: 100%;
+      height: 10px;
+      background: rgba(255,107,53,0.18);
+      z-index: -1;
+      border-radius: 4px;
+    }
+
+    /* ── 스텝 번호 ── */
+    .step-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      font-weight: 900;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    /* ── 체크 리스트 ── */
+    .check-item::before {
+      content: '✓';
+      color: var(--primary);
+      font-weight: 900;
+      margin-right: 8px;
+    }
   </style>
 </head>
 <body class="bg-white text-gray-900 antialiased">
 
-  <!-- NAV -->
-  <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-purple-50">
-    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <span class="text-lg font-black" style="color:#2d1254;">퀸비<span class="gold">스피치</span></span>
+  <!-- ════════════════════════════════════
+       NAV
+  ════════════════════════════════════ -->
+  <nav class="fixed top-0 w-full z-50 bg-white border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-5 h-[60px] flex items-center justify-between">
+      <!-- 로고 -->
+      <a href="#" class="flex items-center gap-2">
+        <span class="text-xl font-black" style="color:var(--navy);">👑 퀸비스피치</span>
+      </a>
+      <!-- 메뉴 -->
+      <div class="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-500">
+        <a href="#situation" class="hover:text-gray-900 transition">내 상황 선택</a>
+        <a href="#features" class="hover:text-gray-900 transition">특징</a>
+        <a href="#services" class="hover:text-gray-900 transition">프로그램</a>
+        <a href="#about" class="hover:text-gray-900 transition">원장 소개</a>
       </div>
-      <div class="hidden md:flex items-center gap-7">
-        <a href="#about" class="nav-link">원장 소개</a>
-        <a href="#services" class="nav-link">프로그램</a>
-        <a href="#features" class="nav-link">특징</a>
-        <a href="#contact" class="nav-link">상담 신청</a>
-      </div>
-      <a href="tel:010-2535-1706"
-         class="text-sm font-bold text-white px-5 py-2 rounded-full"
-         style="background: linear-gradient(135deg, #2d1254, #4a306d);">
-        📞 무료 상담
+      <!-- CTA -->
+      <a href="#contact" class="btn-primary px-5 py-2 text-sm">
+        ⚡ 무료 상담 신청하기
       </a>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero-bg min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
-    <!-- deco circles -->
-    <div class="absolute top-20 right-10 w-72 h-72 rounded-full opacity-10"
-         style="background: radial-gradient(circle, #c9a84c, transparent);"></div>
-    <div class="absolute bottom-20 left-0 w-96 h-96 rounded-full opacity-5"
-         style="background: radial-gradient(circle, #a78bfa, transparent);"></div>
 
-    <div class="max-w-4xl mx-auto px-6 py-24 text-center relative z-10">
+  <!-- ════════════════════════════════════
+       HERO
+  ════════════════════════════════════ -->
+  <section class="hero-wrap pt-[60px] min-h-screen flex items-center">
+    <div class="max-w-5xl mx-auto px-5 py-24 text-center">
+
       <div class="fade-up mb-5">
-        <span class="inline-block text-sm font-semibold px-5 py-2 rounded-full border"
-              style="color:#c9a84c; border-color:rgba(201,168,76,0.35); background:rgba(201,168,76,0.07);">
-          경기도 수원 광교 · 대표원장 1:1 직강
-        </span>
+        <span class="badge">🏆 15년 경력 · 대표원장 1:1 직강 · 경기도 수원 광교</span>
       </div>
 
-      <h1 class="fade-up delay-1 text-5xl md:text-6xl font-black text-white leading-tight mb-4">
-        자신감을 찾아주는
+      <h1 class="fade-up d1 text-5xl md:text-6xl font-black leading-tight mb-5" style="color:var(--navy);">
+        말 한 마디가<br/>
+        당신의 인생을 바꿉니다 🔥
       </h1>
-      <h2 class="fade-up delay-1 text-4xl md:text-5xl font-black leading-tight mb-8">
-        <span class="gold-text">'말'근육 퍼스널 트레이닝</span>
-      </h2>
-      <p class="fade-up delay-2 text-lg text-purple-200/80 max-w-xl mx-auto leading-relaxed mb-10">
+
+      <p class="fade-up d2 text-lg text-gray-500 mb-8 leading-relaxed">
         완벽한 스피치로 숨어있던 자신감을 되찾다.<br/>
-        <strong class="text-white">15년 경력의 대표원장 김경민</strong>이 직접 가르칩니다.
+        <strong class="text-gray-800">나에게 맞는 스피치 상황을 선택하세요. 📢</strong>
       </p>
-      <div class="fade-up delay-3 flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#contact"
-           class="inline-flex items-center justify-center gap-2 font-bold px-8 py-4 rounded-full text-base transition hover:opacity-90"
-           style="background: linear-gradient(135deg, #c9a84c, #f0d080); color:#1a0533;">
-          지금 무료 상담 신청 →
+
+      <div class="fade-up d3 flex flex-col sm:flex-row gap-3 justify-center mb-16">
+        <a href="#situation" class="btn-primary px-8 py-4 text-base">
+          내 상황 선택하기 →
         </a>
-        <a href="tel:010-2535-1706"
-           class="inline-flex items-center justify-center gap-2 font-semibold text-white px-8 py-4 rounded-full border border-white/25 hover:bg-white/10 transition">
+        <a href="tel:010-2535-1706" class="btn-outline px-8 py-4 text-base">
           ☎ 010-2535-1706
         </a>
       </div>
 
-      <!-- floating badges -->
-      <div class="float mt-16 flex flex-wrap justify-center gap-3">
-        <span class="bg-white/10 backdrop-blur border border-white/20 text-white/80 text-sm px-4 py-2 rounded-xl">면접스피치</span>
-        <span class="bg-white/10 backdrop-blur border border-white/20 text-white/80 text-sm px-4 py-2 rounded-xl">보이스트레이닝</span>
-        <span class="bg-white/10 backdrop-blur border border-white/20 text-white/80 text-sm px-4 py-2 rounded-xl">프리젠테이션</span>
-        <span class="bg-white/10 backdrop-blur border border-white/20 text-white/80 text-sm px-4 py-2 rounded-xl">IR피칭</span>
-        <span class="bg-white/10 backdrop-blur border border-white/20 text-white/80 text-sm px-4 py-2 rounded-xl">발표불안 극복</span>
+      <!-- 통계 -->
+      <div class="fade-up d4 grid grid-cols-3 gap-4 max-w-lg mx-auto">
+        <div class="rounded-2xl p-5" style="background:var(--primary-light);">
+          <div class="stat-num">15년</div>
+          <div class="text-xs text-gray-500 mt-1 font-medium">강의·방송 경력</div>
+        </div>
+        <div class="rounded-2xl p-5" style="background:#ECEEF8;">
+          <div class="stat-num" style="color:var(--navy);">1:1</div>
+          <div class="text-xs text-gray-500 mt-1 font-medium">대표원장 직강</div>
+        </div>
+        <div class="rounded-2xl p-5" style="background:#F0FBF0;">
+          <div class="stat-num" style="color:#2E7D32;">90분</div>
+          <div class="text-xs text-gray-500 mt-1 font-medium">집중 수업</div>
+        </div>
       </div>
+
     </div>
   </section>
 
-  <!-- DIVIDER -->
-  <div class="py-8"><div class="divider"></div></div>
 
-  <!-- ABOUT -->
-  <section id="about" class="max-w-5xl mx-auto px-6 py-16">
-    <div class="grid md:grid-cols-2 gap-14 items-center">
-      <div>
-        <div class="accent-line mb-6"></div>
-        <h2 class="text-4xl font-black mb-6" style="color:#1a0533;">
-          대표원장<br/><span class="gold-text">김경민</span>을 소개합니다
+  <!-- ════════════════════════════════════
+       상황 선택 (jobzorro 스타일)
+  ════════════════════════════════════ -->
+  <section id="situation" style="background:var(--gray-bg);" class="py-20">
+    <div class="max-w-5xl mx-auto px-5">
+
+      <div class="text-center mb-12">
+        <span class="section-tag">SITUATION</span>
+        <h2 class="text-4xl font-black mb-3" style="color:var(--navy);">
+          나에게 맞는 상황을 선택하세요 😎
         </h2>
-        <p class="text-gray-600 leading-relaxed mb-5">
-          강의와 방송을 합쳐 <strong class="text-gray-900">15년의 경력</strong>을 쌓아온 스피치 전문가입니다. 수백 명의 수강생과 함께 면접 합격, 발표 성공, 자신감 회복의 순간들을 만들어왔습니다.
-        </p>
-        <p class="text-gray-600 leading-relaxed mb-8">
-          <strong class="text-gray-900">응용인지심리학·상담심리학</strong> 기반의 과학적 접근법으로, 단순한 발성 교정이 아닌 <em>말의 근육</em>을 만드는 교육을 제공합니다.
-        </p>
-        <div class="grid grid-cols-2 gap-4">
-          <div class="card p-5 text-center">
-            <div class="text-3xl font-black gold mb-1">15년</div>
-            <div class="text-xs text-gray-500">강의·방송 경력</div>
-          </div>
-          <div class="card p-5 text-center">
-            <div class="text-3xl font-black gold mb-1">1:1</div>
-            <div class="text-xs text-gray-500">대표원장 직강</div>
-          </div>
-          <div class="card p-5 text-center">
-            <div class="text-3xl font-black gold mb-1">90분</div>
-            <div class="text-xs text-gray-500">1회 수업시간</div>
-          </div>
-          <div class="card p-5 text-center">
-            <div class="text-3xl font-black gold mb-1">10~15회</div>
-            <div class="text-xs text-gray-500">권장 수강 횟수</div>
-          </div>
+        <p class="text-gray-500">상황에 따라 필요한 스피치 훈련이 다릅니다.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+        <a href="#contact" class="situation-card block">
+          <span class="emoji">🎯</span>
+          <h3>면접 준비 중</h3>
+          <p>취업·이직 면접을 앞두고 첫인상과 답변이 걱정돼요</p>
+        </a>
+
+        <a href="#contact" class="situation-card block">
+          <span class="emoji">😰</span>
+          <h3>발표가 너무 무서워</h3>
+          <p>회사 PT, 수업 발표, 스피치만 하면 온 몸이 굳어요</p>
+        </a>
+
+        <a href="#contact" class="situation-card block">
+          <span class="emoji">🎤</span>
+          <h3>목소리·발음 교정</h3>
+          <p>목소리가 작거나 발음이 부정확해서 전달력이 약해요</p>
+        </a>
+
+        <a href="#contact" class="situation-card block">
+          <span class="emoji">🚀</span>
+          <h3>사업·IR 피칭</h3>
+          <p>투자자 앞에서 3분 안에 내 사업을 설득해야 해요</p>
+        </a>
+
+      </div>
+
+      <!-- 2행 -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+
+        <a href="#contact" class="situation-card block">
+          <span class="emoji">📺</span>
+          <h3>미디어 출연</h3>
+          <p>유튜브·방송·SNS 카메라 앞에서 자연스럽게 말하고 싶어요</p>
+        </a>
+
+        <a href="#contact" class="situation-card block">
+          <span class="emoji">✨</span>
+          <h3>자존감·자신감 회복</h3>
+          <p>말하는 것 자체가 두렵고 나를 표현하는 게 어려워요</p>
+        </a>
+
+        <a href="#contact" class="situation-card block">
+          <span class="emoji">🗣️</span>
+          <h3>사투리 교정</h3>
+          <p>지역 억양이 강해서 표준어로 자연스럽게 말하고 싶어요</p>
+        </a>
+
+        <a href="#contact" class="situation-card block">
+          <span class="emoji">🏫</span>
+          <h3>강사·강연자 준비</h3>
+          <p>강단에서 전달력 있게, 청중을 사로잡는 강사가 되고 싶어요</p>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       FEATURES (3대 차별점)
+  ════════════════════════════════════ -->
+  <section id="features" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-5">
+
+      <div class="text-center mb-14">
+        <span class="section-tag">WHY QUEENBEE</span>
+        <h2 class="text-4xl font-black mb-3" style="color:var(--navy);">
+          퀸비스피치가 다른 이유 💡
+        </h2>
+        <p class="text-gray-500">1천 개의 학원이 아닌, 딱 1명의 전문가가 필요한 이유입니다.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <div class="service-card">
+          <div class="text-4xl mb-4">🎯</div>
+          <span class="badge mb-3 inline-block">FEATURE 01</span>
+          <h3 class="text-xl font-black mb-3" style="color:var(--navy);">개인 맞춤형<br/>밀착 코칭</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">강점과 약점을 정밀 분석 후, 나만을 위한 커리큘럼을 설계합니다. 그룹 수업과는 차원이 다른 집중도입니다.</p>
         </div>
+
+        <div class="service-card" style="border-color:var(--primary); box-shadow:0 0 0 1px rgba(255,107,53,0.15);">
+          <div class="text-4xl mb-4">👑</div>
+          <span class="badge mb-3 inline-block">FEATURE 02</span>
+          <h3 class="text-xl font-black mb-3" style="color:var(--navy);">15년 경력<br/>대표원장 직강</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">강의·방송 경력 15년의 김경민 대표원장이 처음부터 끝까지 직접 가르칩니다. 절대 조교에게 넘기지 않습니다.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="text-4xl mb-4">🧠</div>
+          <span class="badge mb-3 inline-block">FEATURE 03</span>
+          <h3 class="text-xl font-black mb-3" style="color:var(--navy);">심리학 기반<br/>과학적 교육</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">응용인지심리학·상담심리학으로 발표 불안의 근본 원인까지 해소합니다. 마음이 바뀌면 말이 바뀝니다.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       프로세스
+  ════════════════════════════════════ -->
+  <section style="background:var(--gray-bg);" class="py-20">
+    <div class="max-w-3xl mx-auto px-5">
+
+      <div class="text-center mb-12">
+        <span class="section-tag">PROCESS</span>
+        <h2 class="text-4xl font-black mb-3" style="color:var(--navy);">
+          이렇게 진행됩니다 📋
+        </h2>
       </div>
 
       <div class="space-y-4">
-        <div class="quote-bg rounded-3xl p-8 relative">
-          <p class="text-white/90 text-lg font-medium leading-relaxed relative z-10">
-            "면접장에서 떨리는 그 순간,<br/>
-            제 자신감을 빌려드리고 싶습니다."
-          </p>
-          <p class="text-purple-300/70 text-sm mt-4 relative z-10">— 대표원장 김경민</p>
-        </div>
-        <div class="card p-6">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-lg flex-shrink-0"
-                 style="background:#f5f0ff;">🧠</div>
-            <div>
-              <div class="font-bold text-sm mb-1" style="color:#2d1254;">심리학 기반 교육</div>
-              <div class="text-xs text-gray-500 leading-relaxed">응용인지심리학 + 상담심리학으로 말에 대한 불안 심리까지 함께 다룹니다.</div>
-            </div>
-          </div>
-        </div>
-        <div class="card p-6">
-          <div class="flex items-start gap-4">
-            <div class="w-10 h-10 rounded-xl flex items-center justify-center text-lg flex-shrink-0"
-                 style="background:#f5f0ff;">🎭</div>
-            <div>
-              <div class="font-bold text-sm mb-1" style="color:#2d1254;">실전 시뮬레이션</div>
-              <div class="text-xs text-gray-500 leading-relaxed">역할연기, 실전 시뮬레이션 등 다양한 기법으로 실제 상황에서도 흔들리지 않게 훈련합니다.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DIVIDER -->
-  <div class="py-2"><div class="divider"></div></div>
-
-  <!-- FEATURES -->
-  <section id="features" class="py-20" style="background:#faf8fd;">
-    <div class="max-w-5xl mx-auto px-6">
-      <div class="text-center mb-14">
-        <div class="accent-line mx-auto mb-5"></div>
-        <h2 class="text-4xl font-black mb-3" style="color:#1a0533;">퀸비스피치가 다른 이유</h2>
-        <p class="text-gray-500">단순 스피치 학원이 아닙니다. 당신만을 위한 맞춤 훈련입니다.</p>
-      </div>
-      <div class="grid md:grid-cols-3 gap-6">
-
-        <div class="card p-8 text-center">
-          <div class="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-5 text-3xl"
-               style="background:linear-gradient(135deg,#ede9fe,#ddd6fe);">🎯</div>
-          <div class="text-xs font-bold tracking-widest mb-3" style="color:#c9a84c;">FEATURE 01</div>
-          <h3 class="font-black text-lg mb-3" style="color:#1a0533;">개인 맞춤형 밀착 코칭</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">개인의 강점과 약점을 정확히 분석한 뒤, 나만을 위한 커리큘럼을 설계합니다. 일반 그룹 수업과는 차원이 다릅니다.</p>
-        </div>
-
-        <div class="card p-8 text-center" style="border-color:#c9a84c44; box-shadow:0 0 0 2px #c9a84c22;">
-          <div class="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-5 text-3xl"
-               style="background:linear-gradient(135deg,#c9a84c,#f0d080);">👑</div>
-          <div class="text-xs font-bold tracking-widest mb-3" style="color:#c9a84c;">FEATURE 02</div>
-          <h3 class="font-black text-lg mb-3" style="color:#1a0533;">15년 경력 대표원장 직강</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">강의·방송 경력 15년의 노하우를 가진 대표원장 김경민이 직접 1:1로 가르칩니다. 조교에게 넘기지 않습니다.</p>
-        </div>
-
-        <div class="card p-8 text-center">
-          <div class="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-5 text-3xl"
-               style="background:linear-gradient(135deg,#ede9fe,#ddd6fe);">🔬</div>
-          <div class="text-xs font-bold tracking-widest mb-3" style="color:#c9a84c;">FEATURE 03</div>
-          <h3 class="font-black text-lg mb-3" style="color:#1a0533;">심리학 기반 과학적 교육</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">응용인지심리학·상담심리학을 기반으로 발표 불안의 근본 원인을 해소하고 진짜 자신감을 키웁니다.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="max-w-5xl mx-auto px-6 py-20">
-    <div class="text-center mb-12">
-      <div class="accent-line mx-auto mb-5"></div>
-      <h2 class="text-4xl font-black mb-3" style="color:#1a0533;">프로그램</h2>
-      <p class="text-gray-500">목적에 따라 정확히 필요한 것만 훈련합니다.</p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-5 mb-10">
-
-      <div class="card p-7">
-        <div class="text-2xl mb-3">💼</div>
-        <h3 class="font-black mb-2" style="color:#2d1254;">면접스피치</h3>
-        <p class="text-sm text-gray-500 leading-relaxed">첫인상부터 답변 구조까지. 면접관의 마음을 여는 말하기를 훈련합니다.</p>
-      </div>
-
-      <div class="card p-7">
-        <div class="text-2xl mb-3">🎤</div>
-        <h3 class="font-black mb-2" style="color:#2d1254;">보이스트레이닝</h3>
-        <p class="text-sm text-gray-500 leading-relaxed">발성·발음·호흡·공명. 목소리 자체를 바꾸는 근본 훈련입니다.</p>
-      </div>
-
-      <div class="card p-7">
-        <div class="text-2xl mb-3">📺</div>
-        <h3 class="font-black mb-2" style="color:#2d1254;">미디어트레이닝</h3>
-        <p class="text-sm text-gray-500 leading-relaxed">카메라 앞에서도 흔들리지 않는 표정·시선·말투를 만듭니다.</p>
-      </div>
-
-      <div class="card p-7">
-        <div class="text-2xl mb-3">😰</div>
-        <h3 class="font-black mb-2" style="color:#2d1254;">발표불안 극복</h3>
-        <p class="text-sm text-gray-500 leading-relaxed">심리학 기반으로 발표 공포의 원인을 분석하고 단계적으로 해소합니다.</p>
-      </div>
-
-      <div class="card p-7">
-        <div class="text-2xl mb-3">📊</div>
-        <h3 class="font-black mb-2" style="color:#2d1254;">프리젠테이션</h3>
-        <p class="text-sm text-gray-500 leading-relaxed">PT 구조 설계부터 전달력까지. 청중을 설득하는 발표를 완성합니다.</p>
-      </div>
-
-      <div class="card p-7">
-        <div class="text-2xl mb-3">🚀</div>
-        <h3 class="font-black mb-2" style="color:#2d1254;">IR피칭</h3>
-        <p class="text-sm text-gray-500 leading-relaxed">투자자를 움직이는 3분 피치. 핵심만 남기는 비즈니스 스피치 훈련입니다.</p>
-      </div>
-
-      <div class="card p-7">
-        <div class="text-2xl mb-3">✨</div>
-        <h3 class="font-black mb-2" style="color:#2d1254;">자존감스피치</h3>
-        <p class="text-sm text-gray-500 leading-relaxed">말하기 자신감이 곧 삶의 자신감. 내면과 표현을 함께 성장시킵니다.</p>
-      </div>
-
-      <div class="card p-7">
-        <div class="text-2xl mb-3">🗣️</div>
-        <h3 class="font-black mb-2" style="color:#2d1254;">사투리 교정</h3>
-        <p class="text-sm text-gray-500 leading-relaxed">지역 억양을 표준어로 자연스럽게. 어색함 없이 교정합니다.</p>
-      </div>
-
-      <div class="card p-7">
-        <div class="text-2xl mb-3">🏫</div>
-        <h3 class="font-black mb-2" style="color:#2d1254;">강사교육</h3>
-        <p class="text-sm text-gray-500 leading-relaxed">강단에서 빛나는 전달력과 존재감. 강사로서의 말하기를 완성합니다.</p>
-      </div>
-
-    </div>
-
-    <!-- 수업 안내 -->
-    <div class="rounded-3xl p-8 md:p-10" style="background:linear-gradient(135deg,#2d1254,#1a0533);">
-      <div class="grid md:grid-cols-3 gap-6 text-center">
-        <div>
-          <div class="text-3xl font-black gold mb-1">90분</div>
-          <div class="text-purple-200/70 text-sm">1회 수업시간</div>
-        </div>
-        <div class="md:border-x md:border-white/10">
-          <div class="text-3xl font-black gold mb-1">10~15회</div>
-          <div class="text-purple-200/70 text-sm">권장 수강 횟수</div>
-        </div>
-        <div>
-          <div class="text-3xl font-black gold mb-1">1:1</div>
-          <div class="text-purple-200/70 text-sm">대표원장 직강</div>
-        </div>
-      </div>
-      <div class="mt-6 pt-6 border-t border-white/10 text-center text-purple-200/60 text-sm">
-        수강료는 레슨 종류·횟수·기간에 따라 달라집니다. 무료 상담 후 맞춤 안내드립니다.
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="py-20" style="background:#faf8fd;">
-    <div class="max-w-3xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <div class="accent-line mx-auto mb-5"></div>
-        <h2 class="text-4xl font-black mb-3" style="color:#1a0533;">수업 진행 방식</h2>
-      </div>
-      <div class="space-y-5">
-        <div class="flex items-start gap-5 card p-6">
-          <div class="step-num">01</div>
+        <div class="bg-white rounded-2xl p-6 flex items-start gap-4 border border-gray-100">
+          <div class="step-circle">1</div>
           <div>
-            <div class="font-bold mb-1" style="color:#2d1254;">무료 상담</div>
-            <div class="text-sm text-gray-500">목표·현재 상태·고민을 파악합니다. 전화 또는 방문 상담 가능합니다.</div>
+            <div class="font-bold text-base mb-1" style="color:var(--navy);">무료 상담 (전화 또는 방문)</div>
+            <div class="text-sm text-gray-500">목표, 현재 상태, 고민을 파악합니다. 비용이나 부담 없이 편하게 연락주세요.</div>
           </div>
         </div>
-        <div class="flex items-start gap-5 card p-6">
-          <div class="step-num">02</div>
+        <div class="bg-white rounded-2xl p-6 flex items-start gap-4 border border-gray-100">
+          <div class="step-circle">2</div>
           <div>
-            <div class="font-bold mb-1" style="color:#2d1254;">개인 분석 &amp; 커리큘럼 설계</div>
-            <div class="text-sm text-gray-500">강점과 약점을 정확히 분석 후, 나만을 위한 맞춤 커리큘럼을 구성합니다.</div>
+            <div class="font-bold text-base mb-1" style="color:var(--navy);">개인 분석 & 맞춤 커리큘럼 설계</div>
+            <div class="text-sm text-gray-500">강점과 약점을 정밀하게 진단하고, 목표에 맞는 수업 계획을 세웁니다.</div>
           </div>
         </div>
-        <div class="flex items-start gap-5 card p-6">
-          <div class="step-num">03</div>
+        <div class="bg-white rounded-2xl p-6 flex items-start gap-4 border border-gray-100">
+          <div class="step-circle">3</div>
           <div>
-            <div class="font-bold mb-1" style="color:#2d1254;">1:1 실전 훈련 (90분 × 10~15회)</div>
-            <div class="text-sm text-gray-500">역할연기·시뮬레이션·피드백. 실전과 가장 가까운 환경에서 반복 훈련합니다.</div>
+            <div class="font-bold text-base mb-1" style="color:var(--navy);">1:1 실전 훈련 (90분 × 10~15회)</div>
+            <div class="text-sm text-gray-500">역할연기, 시뮬레이션, 즉각 피드백. 실전과 똑같은 환경에서 반복 훈련합니다.</div>
           </div>
         </div>
-        <div class="flex items-start gap-5 card p-6">
-          <div class="step-num">04</div>
+        <div class="bg-white rounded-2xl p-6 flex items-start gap-4 border border-gray-100">
+          <div class="step-circle">4</div>
           <div>
-            <div class="font-bold mb-1" style="color:#2d1254;">자신감 있는 나</div>
+            <div class="font-bold text-base mb-1" style="color:var(--navy);">자신감 있는 나 🎉</div>
             <div class="text-sm text-gray-500">면접 합격, 발표 성공, 일상에서의 당당함. 말이 바뀌면 삶이 바뀝니다.</div>
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- CTA -->
-  <section id="contact" class="hero-bg py-24 relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-80 h-80 rounded-full opacity-10"
-         style="background:radial-gradient(circle,#c9a84c,transparent);"></div>
-    <div class="max-w-2xl mx-auto px-6 text-center relative z-10">
-      <h2 class="text-4xl md:text-5xl font-black text-white leading-tight mb-4">
-        지금, 첫 걸음을<br/>
-        <span class="gold-text">내딛어 보세요.</span>
-      </h2>
-      <p class="text-purple-200/70 mb-10 leading-relaxed">
-        무료 상담을 통해 현재 나의 스피치 상태를 점검하고<br/>
-        무엇을 어떻게 개선할지 방향을 잡아드립니다.
-      </p>
 
-      <div class="bg-white/10 backdrop-blur border border-white/15 rounded-2xl p-8 text-left">
+  <!-- ════════════════════════════════════
+       프로그램 전체
+  ════════════════════════════════════ -->
+  <section id="services" class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-5">
+
+      <div class="text-center mb-12">
+        <span class="section-tag">PROGRAMS</span>
+        <h2 class="text-4xl font-black mb-3" style="color:var(--navy);">
+          전체 프로그램 🗂️
+        </h2>
+        <p class="text-gray-500">목적에 따라 정확히 필요한 것만 훈련합니다.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="service-card flex items-center gap-4">
+          <span class="text-3xl">💼</span>
+          <div>
+            <div class="font-black" style="color:var(--navy);">면접스피치</div>
+            <div class="text-xs text-gray-400 mt-0.5">취업·이직 면접 완성</div>
+          </div>
+        </div>
+        <div class="service-card flex items-center gap-4">
+          <span class="text-3xl">🎤</span>
+          <div>
+            <div class="font-black" style="color:var(--navy);">보이스트레이닝</div>
+            <div class="text-xs text-gray-400 mt-0.5">발성·발음·호흡·공명</div>
+          </div>
+        </div>
+        <div class="service-card flex items-center gap-4">
+          <span class="text-3xl">📺</span>
+          <div>
+            <div class="font-black" style="color:var(--navy);">미디어트레이닝</div>
+            <div class="text-xs text-gray-400 mt-0.5">카메라 앞 자연스러운 표현</div>
+          </div>
+        </div>
+        <div class="service-card flex items-center gap-4">
+          <span class="text-3xl">😰</span>
+          <div>
+            <div class="font-black" style="color:var(--navy);">발표불안 극복</div>
+            <div class="text-xs text-gray-400 mt-0.5">심리학 기반 근본 해소</div>
+          </div>
+        </div>
+        <div class="service-card flex items-center gap-4">
+          <span class="text-3xl">📊</span>
+          <div>
+            <div class="font-black" style="color:var(--navy);">프리젠테이션</div>
+            <div class="text-xs text-gray-400 mt-0.5">구조·전달력·설득</div>
+          </div>
+        </div>
+        <div class="service-card flex items-center gap-4">
+          <span class="text-3xl">🚀</span>
+          <div>
+            <div class="font-black" style="color:var(--navy);">IR피칭</div>
+            <div class="text-xs text-gray-400 mt-0.5">투자자를 움직이는 3분</div>
+          </div>
+        </div>
+        <div class="service-card flex items-center gap-4">
+          <span class="text-3xl">✨</span>
+          <div>
+            <div class="font-black" style="color:var(--navy);">자존감스피치</div>
+            <div class="text-xs text-gray-400 mt-0.5">내면과 표현을 함께 성장</div>
+          </div>
+        </div>
+        <div class="service-card flex items-center gap-4">
+          <span class="text-3xl">🗣️</span>
+          <div>
+            <div class="font-black" style="color:var(--navy);">사투리 교정</div>
+            <div class="text-xs text-gray-400 mt-0.5">자연스러운 표준어 구사</div>
+          </div>
+        </div>
+        <div class="service-card flex items-center gap-4">
+          <span class="text-3xl">🏫</span>
+          <div>
+            <div class="font-black" style="color:var(--navy);">강사교육</div>
+            <div class="text-xs text-gray-400 mt-0.5">강단에서 빛나는 전달력</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       원장 소개
+  ════════════════════════════════════ -->
+  <section id="about" style="background:var(--navy);" class="py-20">
+    <div class="max-w-5xl mx-auto px-5">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+
+        <div>
+          <span class="section-tag" style="color:#FF9A7A;">ABOUT</span>
+          <h2 class="text-4xl font-black text-white mb-5 leading-tight">
+            대표원장<br/><span style="color:#FF6B35;">김경민</span>입니다 👋
+          </h2>
+          <p class="text-gray-300 leading-relaxed mb-6">
+            강의와 방송을 합쳐 <strong class="text-white">15년의 경력</strong>을 쌓아온 스피치 전문가입니다. 응용인지심리학·상담심리학을 기반으로 단순한 발성 교정이 아닌 <em class="text-orange-300">말의 근육</em>을 만드는 교육을 합니다.
+          </p>
+          <div class="space-y-3">
+            <div class="check-item text-sm text-gray-300">강의·방송 경력 도합 15년의 노하우</div>
+            <div class="check-item text-sm text-gray-300">응용인지심리학 / 상담심리학 기반 교육</div>
+            <div class="check-item text-sm text-gray-300">역할연기·시뮬레이션 등 실전 기법 활용</div>
+            <div class="check-item text-sm text-gray-300">대표원장이 처음부터 끝까지 1:1 직강</div>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="rounded-2xl p-6" style="background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.12);">
+            <p class="text-white text-lg font-semibold leading-relaxed">
+              "면접장에서 떨리는 그 순간,<br/>제 자신감을 빌려드리고 싶습니다."
+            </p>
+            <p class="text-gray-400 text-sm mt-3">— 대표원장 김경민</p>
+          </div>
+          <div class="grid grid-cols-3 gap-3">
+            <div class="rounded-xl p-4 text-center" style="background:rgba(255,107,53,0.15);">
+              <div class="text-2xl font-black text-orange-400">15년</div>
+              <div class="text-xs text-gray-400 mt-1">강의·방송</div>
+            </div>
+            <div class="rounded-xl p-4 text-center" style="background:rgba(255,255,255,0.07);">
+              <div class="text-2xl font-black text-white">1:1</div>
+              <div class="text-xs text-gray-400 mt-1">직강</div>
+            </div>
+            <div class="rounded-xl p-4 text-center" style="background:rgba(255,255,255,0.07);">
+              <div class="text-2xl font-black text-white">90분</div>
+              <div class="text-xs text-gray-400 mt-1">집중 수업</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       SNS 채널 (jobzorro 스타일)
+  ════════════════════════════════════ -->
+  <section style="background:var(--gray-bg);" class="py-16">
+    <div class="max-w-3xl mx-auto px-5 text-center">
+      <h2 class="text-2xl font-black mb-2" style="color:var(--navy);">
+        다양한 채널에서 더 많은 스피치 정보를 얻어가세요! 📢
+      </h2>
+      <p class="text-gray-400 text-sm mb-8">팔로우하고 매일 업데이트되는 스피치 팁을 받아보세요.</p>
+      <div class="flex justify-center gap-4">
+        <a href="https://www.instagram.com/queenbeespeech" target="_blank" class="sns-btn" style="background:#fce4ec; font-size:26px;" title="인스타그램">📸</a>
+        <a href="https://www.youtube.com/@queenbeespeech" target="_blank" class="sns-btn" style="background:#ffebee; font-size:26px;" title="유튜브">▶️</a>
+        <a href="https://pf.kakao.com/queenbeespeech" target="_blank" class="sns-btn" style="background:#FFFDE7; font-size:26px;" title="카카오톡">💬</a>
+        <a href="https://blog.naver.com/queenbeespeech" target="_blank" class="sns-btn" style="background:#E8F5E9; font-size:26px;" title="블로그">📝</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════
+       CTA / 상담 신청
+  ════════════════════════════════════ -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-2xl mx-auto px-5">
+
+      <div class="text-center mb-10">
+        <span class="section-tag">FREE CONSULTATION</span>
+        <h2 class="text-4xl font-black mb-3" style="color:var(--navy);">
+          지금 바로 무료 상담 신청! ⚡
+        </h2>
+        <p class="text-gray-500">수강료 안내부터 커리큘럼까지, 부담 없이 물어보세요.</p>
+      </div>
+
+      <div class="rounded-3xl p-8 border-2" style="border-color:#EEEEF2;">
         <div class="space-y-4">
           <div>
-            <label class="text-purple-200 text-sm font-medium mb-1 block">이름</label>
+            <label class="text-sm font-bold text-gray-700 mb-1.5 block">이름 *</label>
             <input type="text" placeholder="홍길동"
-                   class="w-full bg-white/10 border border-white/20 text-white placeholder-white/30 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-400 text-sm" />
+                   class="w-full border-2 border-gray-100 bg-gray-50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange-300 transition" />
           </div>
           <div>
-            <label class="text-purple-200 text-sm font-medium mb-1 block">연락처</label>
+            <label class="text-sm font-bold text-gray-700 mb-1.5 block">연락처 *</label>
             <input type="tel" placeholder="010-0000-0000"
-                   class="w-full bg-white/10 border border-white/20 text-white placeholder-white/30 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-400 text-sm" />
+                   class="w-full border-2 border-gray-100 bg-gray-50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange-300 transition" />
           </div>
           <div>
-            <label class="text-purple-200 text-sm font-medium mb-1 block">관심 프로그램</label>
-            <select class="w-full bg-white/10 border border-white/20 text-white rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-400 text-sm">
-              <option value="" class="text-gray-900">선택해주세요</option>
-              <option value="interview" class="text-gray-900">면접스피치</option>
-              <option value="voice" class="text-gray-900">보이스트레이닝</option>
-              <option value="media" class="text-gray-900">미디어트레이닝</option>
-              <option value="anxiety" class="text-gray-900">발표불안 극복</option>
-              <option value="pt" class="text-gray-900">프리젠테이션</option>
-              <option value="ir" class="text-gray-900">IR피칭</option>
-              <option value="self" class="text-gray-900">자존감스피치</option>
-              <option value="dialect" class="text-gray-900">사투리 교정</option>
-              <option value="instructor" class="text-gray-900">강사교육</option>
+            <label class="text-sm font-bold text-gray-700 mb-1.5 block">내 상황을 선택해주세요 *</label>
+            <select class="w-full border-2 border-gray-100 bg-gray-50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange-300 transition text-gray-700">
+              <option value="">상황을 선택해주세요</option>
+              <option>면접 준비 중 (취업·이직)</option>
+              <option>발표가 너무 무서워요 (발표불안)</option>
+              <option>목소리·발음 교정이 필요해요</option>
+              <option>사업·IR 피칭 준비 중</option>
+              <option>미디어 출연 준비 (유튜브·방송)</option>
+              <option>자존감·자신감을 키우고 싶어요</option>
+              <option>사투리 교정</option>
+              <option>강사·강연자로 성장하고 싶어요</option>
             </select>
           </div>
-          <button class="w-full py-4 rounded-xl font-bold text-base transition hover:opacity-90"
-                  style="background:linear-gradient(135deg,#c9a84c,#f0d080); color:#1a0533;">
-            무료 상담 신청하기 →
+          <div>
+            <label class="text-sm font-bold text-gray-700 mb-1.5 block">하고 싶은 말이 있으면 적어주세요</label>
+            <textarea placeholder="현재 고민이나 궁금한 점을 자유롭게 적어주세요." rows="3"
+                      class="w-full border-2 border-gray-100 bg-gray-50 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-orange-300 transition resize-none"></textarea>
+          </div>
+          <button class="btn-primary w-full justify-center py-4 text-base rounded-xl">
+            ⚡ 무료 상담 신청하기
           </button>
         </div>
-        <p class="text-white/30 text-xs text-center mt-4">영업일 기준 24시간 이내 연락드립니다.</p>
+        <p class="text-xs text-gray-400 text-center mt-4">영업일 기준 24시간 이내 연락드립니다.</p>
       </div>
 
       <!-- 직접 연락 -->
-      <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+      <div class="mt-6 grid grid-cols-2 gap-3">
         <a href="tel:010-2535-1706"
-           class="flex items-center justify-center gap-2 text-white/80 hover:text-white text-sm font-medium border border-white/20 px-5 py-3 rounded-full hover:border-white/40 transition">
+           class="flex items-center justify-center gap-2 py-4 rounded-2xl border-2 border-gray-100 hover:border-orange-200 text-sm font-bold text-gray-700 transition hover:bg-orange-50">
           📞 010-2535-1706
         </a>
         <a href="mailto:queenbee_speech@naver.com"
-           class="flex items-center justify-center gap-2 text-white/80 hover:text-white text-sm font-medium border border-white/20 px-5 py-3 rounded-full hover:border-white/40 transition">
-          ✉ queenbee_speech@naver.com
+           class="flex items-center justify-center gap-2 py-4 rounded-2xl border-2 border-gray-100 hover:border-orange-200 text-sm font-bold text-gray-700 transition hover:bg-orange-50">
+          ✉️ 이메일 문의
         </a>
       </div>
+
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-gray-950 text-gray-500 py-10">
-    <div class="max-w-5xl mx-auto px-6">
-      <div class="flex flex-col md:flex-row justify-between items-start gap-6">
+
+  <!-- ════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════ -->
+  <footer class="py-10 border-t border-gray-100">
+    <div class="max-w-5xl mx-auto px-5">
+      <div class="flex flex-col md:flex-row justify-between items-start gap-6 mb-6">
         <div>
-          <div class="font-black text-white text-lg mb-2">퀸비<span class="gold">스피치</span></div>
-          <p class="text-sm leading-relaxed text-gray-500">
+          <div class="text-lg font-black mb-2" style="color:var(--navy);">👑 퀸비스피치</div>
+          <p class="text-sm text-gray-400 leading-relaxed">
             자신감을 찾아주는 '말'근육 퍼스널 트레이닝<br/>
             대표 김경민 · 사업자등록번호 191-07-02910
           </p>
         </div>
-        <div class="text-sm text-gray-500 space-y-1">
+        <div class="text-sm text-gray-400 space-y-1">
           <div>📍 경기도 수원시 광교중앙로 170, 1706호</div>
           <div>📞 010-2535-1706</div>
-          <div>✉ queenbee_speech@naver.com</div>
+          <div>✉️ queenbee_speech@naver.com</div>
         </div>
       </div>
-      <div class="border-t border-gray-800 mt-8 pt-6 text-xs text-gray-600 text-center">
-        © 2026 퀸비스피치. All rights reserved.
+      <div class="flex gap-4 text-xs text-gray-400 border-t border-gray-100 pt-6">
+        <a href="#" class="hover:text-gray-600">이용약관</a>
+        <a href="#" class="hover:text-gray-600">개인정보처리방침</a>
+        <span class="ml-auto">© 2026 퀸비스피치. All rights reserved.</span>
       </div>
     </div>
   </footer>
